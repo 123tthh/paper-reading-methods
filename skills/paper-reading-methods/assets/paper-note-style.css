@@ -1,0 +1,80 @@
+/* Source-measured palette and type scale; portable layout rules are documented in format-guide.md. */
+:root {
+  color-scheme: light;
+  --ink: #1f2329; --blue: #1456f0; --muted: #646a73;
+  --header: #f2f3f5; --line: #dee0e3;
+  --orange: #feead2; --orange-border: #ffba6b;
+  --green: #d9f5d6; --green-border: #8ee085;
+  --red: #fde2e2; --red-border: #f98e8b;
+  --purple: #ece2fe; --purple-border: #ad82f7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: white; color: var(--ink); font: 400 16px/1.625 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Tahoma, "PingFang SC", "Microsoft YaHei", Arial, "Hiragino Sans GB", sans-serif; }
+main { max-width: 868px; padding: 48px 24px 80px; margin: 0 auto; }
+h1 { margin: 0 0 8px; font-size: 34px; line-height: 1.625; font-weight: 500; }
+h2, h3, h4 { font-weight: 500; line-height: 1.4; scroll-margin-top: 24px; }
+h2 { font-size: 26px; margin: 40px 0 20px; }
+h3 { font-size: 22px; margin: 28px 0 14px; }
+h4 { font-size: 20px; margin: 24px 0 12px; }
+.num { color: var(--blue); font-family: "Helvetica Neue", Consolas, sans-serif; margin-right: .35em; }
+p { margin: 10px 0; }
+strong { font-weight: 700; }
+a { color: var(--blue); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.meta, figcaption { font-size: 14px; color: var(--muted); }
+.meta { margin-bottom: 20px; }
+nav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 22px 0; font-size: 14px; }
+ul, ol { padding-left: 25px; margin: 12px 0; }
+li { margin: 6px 0; }
+li::marker { color: var(--blue); }
+.callout { display: flex; gap: 12px; padding: 16px; margin: 16px 0; border: 1px solid; border-radius: 8px; }
+.callout .icon { font-size: 20px; line-height: 26px; flex: 0 0 20px; }
+.callout .content { min-width: 0; }
+.callout p:first-child { margin-top: 0; }
+.callout p:last-child { margin-bottom: 0; }
+.orange { background: var(--orange); border-color: var(--orange-border); }
+.green { background: var(--green); border-color: var(--green-border); }
+.red { background: var(--red); border-color: var(--red-border); }
+.purple { background: var(--purple); border-color: var(--purple-border); }
+mark { color: inherit; padding: 0 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+mark.cause { background: rgba(254,212,164,.8); }
+mark.key { background: rgba(255,246,122,.8); }
+mark.definition { background: rgba(205,178,250,.7); }
+.table-wrap { width: 100%; max-width: 100%; margin: 18px 0; }
+table { width: 100%; max-width: 100%; table-layout: fixed; border-collapse: collapse; font-size: 14px; line-height: 22px; }
+caption { text-align: left; color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+th, td { border: 1px solid var(--line); padding: 8px; overflow-wrap: anywhere; }
+th { background: var(--header); text-align: center; font-weight: 700; vertical-align: middle; }
+td { background: white; text-align: left; vertical-align: top; }
+.variables td:first-child { width: 25%; text-align: center; vertical-align: middle; }
+.steps td:first-child { width: 30%; }
+.number { text-align: right; font-variant-numeric: tabular-nums; }
+td p { margin: 0 0 6px; }
+td p:last-child { margin: 0; }
+td ul { margin: 0; padding-left: 1.2em; }
+td li { margin: 0 0 4px; }
+td li:last-child { margin-bottom: 0; }
+.equation { overflow-x: auto; padding: 12px 0; text-align: center; }
+math { font-size: 1.1em; }
+figure { margin: 24px 0; }
+figure img, figure svg { max-width: 100%; height: auto; display: block; margin: auto; }
+figcaption { text-align: center; margin-top: 8px; }
+.diagram { border: 1px solid var(--line); padding: 20px; text-align: center; }
+.placeholder { color: var(--muted); }
+@media (max-width: 600px) {
+  main { padding: 24px 18px 48px; }
+  h1 { font-size: 28px; }
+  .table-wrap table { min-width: 0; width: 100%; }
+  th, td { padding: 6px; }
+  .callout { gap: 8px; }
+}
+@media print {
+  @page { size: A4; margin: 18mm; }
+  body { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  main { max-width: none; padding: 0; }
+  nav { display: none; }
+  h2, h3, h4 { break-after: avoid; }
+  tr, .callout, figure { break-inside: avoid; }
+  thead { display: table-header-group; }
+  .table-wrap, .equation { overflow: visible; }
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>论文精读笔记｜框架与格式模板</title>
+<link rel="stylesheet" href="paper-note-style.css">
+</head>
+<body>
+<main>
+<header>
+<h1>论文标题｜精读笔记</h1>
+<p class="meta">版式模板 · 研究背景 / 方法论 / 实验<br>论文与版本：〈填写〉　阅读范围：〈正文、附录与尚未核实内容〉</p>
+</header>
+<aside class="callout orange"><span class="icon" aria-hidden="true">📎</span><div class="content"><p><strong>论文与项目入口：</strong>在这里填写已核实的论文、代码与项目链接。</p></div></aside>
+<aside class="callout green"><span class="icon" aria-hidden="true">📝</span><div class="content"><p><strong>摘要：</strong>用一段话说明：本文针对什么具体问题，在什么条件下，通过什么机制，取得了什么有证据支持的结果。</p><p class="placeholder">本页演示格式与填写方式，不是一篇新论文的分析结果。正式交付时替换提示文字。</p></div></aside>
+<nav aria-label="正文目录"><a href="#background">1. 研究背景</a><a href="#method">2. 方法论</a><a href="#experiments">3. 实验</a></nav>
+<section aria-labelledby="background">
+<h2 id="background"><span class="num">1.</span>研究背景</h2>
+<h3><span class="num">1.1</span>当前研究进展</h3>
+<p>只保留理解本文定位所需的前作、能力与假设。段首用<strong>简短标签</strong>抓住主旨，再用具体描述解释它。</p>
+<ul><li><strong>已有能力：</strong>已有方法能完成什么任务，依赖什么条件。</li><li><strong>研究空缺：</strong>指出与本文设计直接相关的缺口。</li></ul>
+<h3><span class="num">1.2</span>局限性与挑战</h3>
+<p>从场景、失败现象与约束展开。用橙色高亮一句关键原因，例如：<mark class="cause">这一限制在什么条件下出现，又导致什么后果。</mark></p>
+<h3><span class="num">1.3</span>本文改进思路</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">局限/挑战</th><th scope="col">设计回应</th><th scope="col">预期作用</th></tr></thead><tbody><tr><td>〈具体困难〉</td><td>〈对应模块或训练设计〉</td><td>〈为何有用，后文如何验证〉</td></tr></tbody></table></div>
+<p>用黄色高亮少量核心设计：<mark class="key">作者改变了什么，以及这个改变为何回应前面的困难。</mark></p>
+</section>
+<section aria-labelledby="method">
+<h2 id="method"><span class="num">2.</span>方法论</h2>
+<aside class="callout orange"><span class="icon" aria-hidden="true">🧭</span><div class="content"><p><strong>本节核心问题：</strong>先说明方法要解决的关键困难，以及整体采用什么思路；再进入预备知识、架构、模块和完整流程。</p></div></aside>
+<h3><span class="num">2.1</span>预备知识</h3>
+<aside class="callout purple"><span class="icon" aria-hidden="true">✏️</span><div class="content"><p><strong>概念解释：</strong>解释后文必需的定义与对照。<mark class="definition">训练时更新的参数，与运行时传递的状态，应分别定义。</mark></p></div></aside>
+<div class="table-wrap"><table class="variables"><caption>变量表 · 示例为通用接口占位，按目标论文替换</caption><thead><tr><th scope="col">物理量与变量</th><th scope="col">定义</th></tr></thead><tbody><tr><td><math aria-label="x 下标 t"><msub><mi>x</mi><mi>t</mi></msub></math></td><td><ul><li>〈输入的含义、来源、维度或单位；t 所属的时间轴〉</li></ul></td></tr><tr><td><math aria-label="theta"><mi>θ</mi></math></td><td><ul><li>〈模型参数；由哪个目标更新，推理时是否冻结〉</li></ul></td></tr><tr><td><math aria-label="h 下标 t"><msub><mi>h</mi><mi>t</mi></msub></math></td><td><ul><li>〈传递状态；如何初始化、继承和重置〉</li></ul></td></tr></tbody></table></div>
+<h3><span class="num">2.2</span>总体架构</h3>
+<p>先沿数据流讲一遍整体，再展开各模块。正式笔记优先放目标论文中已核实的架构图。</p>
+<figure><div class="diagram" role="img" aria-label="解释性占位示意：输入经过模块或阶段产生输出">输入 → 模块 / 阶段 → 输出</div><figcaption>解释性占位示意 · 替换为原图后补齐图号、来源和读图结论。</figcaption></figure>
+<h3><span class="num">2.3</span>核心模块与公式</h3>
+<h4><span class="num">2.3.1</span>模块或机制名称</h4>
+<p><strong>目的：</strong>说明为何需要这个模块，随后交代输入、运算、输出及学习方式。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">模块</th><th scope="col">输入</th><th scope="col">操作与输出</th><th scope="col">学习/使用阶段</th></tr></thead><tbody><tr><td>〈名称〉</td><td>〈符号与来源〉</td><td>〈运算、结果与去向〉</td><td>〈更新或冻结、使用条件〉</td></tr></tbody></table></div>
+<p><strong>关键公式：</strong>先定义变量，再写公式，之后说明假设与作用。下面仅演示公式排版，是通用梯度下降的教学示例：θ 为可训练参数，η 为学习率，L 为损失。</p>
+<div class="equation" data-latex="\theta_{new}=\theta_{old}-\eta\nabla_\theta L(\theta_{old})"><math display="block" aria-label="theta 新等于 theta 旧减去 eta 乘以损失关于 theta 的梯度"><mrow><msub><mi>θ</mi><mtext>new</mtext></msub><mo>=</mo><msub><mi>θ</mi><mtext>old</mtext></msub><mo>−</mo><mi>η</mi><msub><mo>∇</mo><mi>θ</mi></msub><mi>L</mi><mo>(</mo><msub><mi>θ</mi><mtext>old</mtext></msub><mo>)</mo></mrow></math></div>
+<p><strong>机制意义与边界：</strong>上式用当前损失梯度给出一次参数更新；它本身不保证一般非凸目标收敛到全局最优。正式笔记应替换为目标论文的公式及其条件。</p>
+<aside class="callout red"><span class="icon" aria-hidden="true">💡</span><div class="content"><p><strong>机制追问：为什么这一步有用？</strong></p><p>先给直接答案，再补机制、必要推导或小例子，最后指出成立条件。浅红色用于突出扩展解释；颜色本身不表示这段话错误或已经得到实验证明。</p></div></aside>
+<h3><span class="num">2.4</span>训练策略</h3>
+<p>交代目标函数、监督来源、更新与冻结对象、阶段衔接、掩蔽或停止梯度等关键条件。没有依据的实现细节标为待核实。</p>
+<h3><span class="num">2.5</span>完整流程</h3>
+<h4><span class="num">2.5.1</span>训练流程</h4>
+<div class="table-wrap"><table class="steps"><thead><tr><th scope="col">步骤</th><th scope="col">流程细节</th></tr></thead><tbody><tr><td><strong>步骤 1：准备数据</strong></td><td>〈数据来源、采样方式、已知量与训练条件〉</td></tr><tr><td><strong>步骤 2：前向与学习信号</strong></td><td>〈各模块的输入输出；损失在哪里计算〉</td></tr><tr><td><strong>步骤 3：更新与下一轮</strong></td><td>〈更新哪些参数，状态如何继承、截断或重置〉</td></tr></tbody></table></div>
+<h4><span class="num">2.5.2</span>推理或部署流程</h4>
+<div class="table-wrap"><table class="steps"><thead><tr><th scope="col">步骤</th><th scope="col">流程细节</th></tr></thead><tbody><tr><td><strong>步骤 1：初始化</strong></td><td>〈加载参数、建立初始状态，说明冻结对象〉</td></tr><tr><td><strong>步骤 2：计算与执行</strong></td><td>〈当前可用信息、预测、在线状态更新、输出与执行〉</td></tr><tr><td><strong>步骤 3：反馈与循环</strong></td><td>〈反馈来源、下一次输入和重置条件〉</td></tr></tbody></table></div>
+</section>
+<section aria-labelledby="experiments">
+<h2 id="experiments"><span class="num">3.</span>实验</h2>
+<h3><span class="num">3.1</span>设置与评价指标</h3>
+<p>写清任务、数据、基线、控制条件、试验规模与指标口径。区分成功率、完成得分、相对增幅与百分点。未读到实验时明确说明范围。</p>
+<h3><span class="num">3.2</span>主要结果</h3>
+<p>把已核实的原图、表和解释放在对应主张附近；表中不填示范性虚构数值。</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">待验证主张</th><th scope="col">对照与设置</th><th scope="col">指标与结果</th><th scope="col">出处与结论边界</th></tr></thead><tbody><tr><td>〈要验证什么〉</td><td>〈同条件下比较谁〉</td><td>〈已核实结果，或待核实〉</td><td>〈图表定位、适用范围〉</td></tr></tbody></table></div>
+<h3><span class="num">3.3</span>消融与机制验证</h3>
+<p>说明移除或替换什么，其余条件是否可比；不要把整体提升自动解释为某个机制已被证明。</p>
+<h3><span class="num">3.4</span>泛化、扩展与失败分析</h3>
+<p>只整理论文实际提供的证据；记录测试范围、代价和失败案例。目标论文未涉及且无证据时删去本二级小节。</p>
+<h3><span class="num">3.5</span>结论与局限</h3>
+<p><strong>问题与机制：</strong>压缩为读者能复述的结论。</p>
+<p><strong>证据与限制：</strong>指出最有力的证据及结论的适用边界。</p>
+<p><strong>可迁移启发：</strong>与作者已证实的贡献分开表述。</p>
+</section>
+</main>
+</body>
+</html>
