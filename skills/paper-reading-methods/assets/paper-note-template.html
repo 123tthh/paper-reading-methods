@@ -33,8 +33,10 @@
 <aside class="callout purple"><span class="icon" aria-hidden="true">✏️</span><div class="content"><p><strong>概念解释：</strong>解释后文必需的定义与对照。<mark class="definition">训练时更新的参数，与运行时传递的状态，应分别定义。</mark></p></div></aside>
 <div class="table-wrap"><table class="variables"><caption>变量表 · 示例为通用接口占位，按目标论文替换</caption><thead><tr><th scope="col">物理量与变量</th><th scope="col">定义</th></tr></thead><tbody><tr><td><math data-latex="x_t" aria-label="x 下标 t"><msub><mi>x</mi><mi>t</mi></msub></math></td><td><ul><li>〈输入的含义、来源、维度或单位；<math data-latex="t"><mi>t</mi></math> 所属的时间轴〉</li></ul></td></tr><tr><td><math data-latex="\theta" aria-label="theta"><mi>θ</mi></math></td><td><ul><li>〈模型参数；由哪个目标更新，推理时是否冻结〉</li></ul></td></tr><tr><td><math data-latex="h_t" aria-label="h 下标 t"><msub><mi>h</mi><mi>t</mi></msub></math></td><td><ul><li>〈传递状态；如何初始化、继承和重置〉</li></ul></td></tr></tbody></table></div>
 <h3><span class="num">2.2</span>总体架构</h3>
-<p>先沿数据流讲一遍整体，再展开各模块。正式笔记优先放目标论文中已核实的架构图。</p>
-<figure><div class="diagram" role="img" aria-label="解释性占位示意：输入经过模块或阶段产生输出">输入 → 模块 / 阶段 → 输出</div><figcaption>解释性占位示意 · 替换为原图后补齐图号、来源和读图结论。</figcaption></figure>
+<p>先沿数据流讲一遍整体，再展开各模块。正式笔记必须实际插入目标论文中已核实的架构原图；原文没有架构图时如实说明。</p>
+<!-- 模板占位：成稿须替换为真实 img，指向随文交付或已嵌入的论文原图。 -->
+<figure><p class="placeholder">待插入：论文总体架构原图。没有原图时说明原因，辅助示意不能冒充原图。</p><figcaption>〈原图编号、论文版本、来源链接与页码；裁剪局部另标。〉</figcaption></figure>
+<p><strong>读图说明：</strong>〈阅读顺序、模块与箭头、输入输出、训练/推理差别，以及设计原因。〉</p>
 <aside class="callout red"><span class="icon" aria-hidden="true">💡</span><div class="content"><p><strong>重点讲解：连接的原因：</strong>说明模块为什么按此顺序连接；输入、输出与学习信号分别通过哪些路径传递。</p></div></aside>
 <h3><span class="num">2.3</span>核心模块与公式</h3>
 <h4><span class="num">2.3.1</span>模块或机制名称</h4>
@@ -60,10 +62,15 @@
 <h3><span class="num">3.1</span>设置与评价指标</h3>
 <p>写清任务、数据、基线、控制条件、试验规模与指标口径。区分成功率、完成得分、相对增幅与百分点。未读到实验时明确说明范围。</p>
 <h3><span class="num">3.2</span>主要结果</h3>
-<p>把已核实的原图、表和解释放在对应主张附近；表中不填示范性虚构数值。</p>
+<p>把已核实的主要结果原图、原表和解读放在对应主张附近；按实际图表逐项重复下面的结构。原文没有某类图表时说明不适用，不填虚构数值。</p>
+<figure><p class="placeholder">待替换为主要结果原图的实际图片。</p><figcaption>〈Figure 原编号、来源链接、页码、是否裁剪〉</figcaption></figure>
+<p><strong>读图说明：</strong>〈轴、单位、图例、基线和条件；关键趋势、支持的结论及边界。〉</p>
+<figure><p class="placeholder">待替换为论文原表的实际截图，或使用逐单元格核实的可编辑 table；保留列名、数值、单位与必要脚注。</p><figcaption>〈Table 原编号、来源链接、页码；转录、节选或重排须注明〉</figcaption></figure>
+<p><strong>读表说明：</strong>〈行列含义、指标方向、统计口径、同条件关键数值比较，以及不能推出的结论。〉</p>
+<p><strong>自制证据汇总：</strong>下表用于归纳，不替代论文原图、原表。</p>
 <div class="table-wrap"><table><thead><tr><th scope="col">待验证主张</th><th scope="col">对照与设置</th><th scope="col">指标与结果</th><th scope="col">出处与结论边界</th></tr></thead><tbody><tr><td>〈要验证什么〉</td><td>〈同条件下比较谁〉</td><td>〈已核实结果，或待核实〉</td><td>〈图表定位、适用范围〉</td></tr></tbody></table></div>
 <h3><span class="num">3.3</span>消融与机制验证</h3>
-<p>说明移除或替换什么，其余条件是否可比；不要把整体提升自动解释为某个机制已被证明。</p>
+<p>在此实际插入关键消融原图/原表并标明编号、来源和页码。随后说明移除或替换什么，其余条件是否可比；不要把整体提升自动解释为某个机制已被证明。</p>
 <h3><span class="num">3.4</span>泛化、扩展与失败分析</h3>
 <p>只整理论文实际提供的证据；记录测试范围、代价和失败案例。目标论文未涉及且无证据时删去本二级小节。</p>
 <h3><span class="num">3.5</span>结论与局限</h3>

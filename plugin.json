@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "paper-reading-methods",
-  "version": "0.2.1",
-  "description": "跨 Agent 的论文精读方法与模板：研究背景、方法论、实验；模块与公式解释、训练推理流程和证据核验。",
+  "version": "0.2.2",
+  "description": "跨 Agent 的论文精读方法与模板：研究背景、方法论、实验；模块与公式解释、训练推理流程和证据核验；实际插入关键原图、原表并逐项解读。",
   "author": {
     "name": "123tthh"
   },
@@ -25,7 +25,7 @@
         "category": "Productivity",
         "capabilities": [],
         "defaultPrompt": [
-          "请按研究背景、方法论、实验三段梳理这篇论文，讲清公式与流程，并应用标题、表格与色块格式。",
+          "请按研究背景、方法论、实验三段梳理这篇论文，实际插入关键原图、原表并逐项解释，讲清公式与流程，并应用标题、表格与色块格式。",
           "请解释这条公式的变量、维度、推导假设和物理含义。",
           "请检查这份论文笔记，补齐模块与完整流程之间的理解断点。"
         ]

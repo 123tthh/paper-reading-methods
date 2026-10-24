@@ -17,13 +17,13 @@ cd paper-reading-methods
 
 ```text
 请先读取 skills/paper-reading-methods/SKILL.md，并按其中的相对路径读取
-references/method-guide.md 和 references/format-guide.md。
+references/method-guide.md、references/format-guide.md 和 references/figures-and-tables.md。
 用这套方法精读我提供的论文，按“研究背景—方法论—实验”组织笔记，
-解释模块、公式、训练与推理流程，并为结论标注原文证据。
+解释模块、公式、训练与推理流程，实际插入论文关键原图、原表并逐项解读。
 未读到的内容明确标为未核实。请输出中文 HTML 笔记并检查渲染。
 ```
 
-如果 Agent 不能访问本地文件，将上述三个 Markdown 文件连同目标论文作为附件提供；没有附件功能时按顺序粘贴其内容。需要视觉输出时同时提供 HTML 与 CSS 模板。只给一个 GitHub 链接不保证 Agent 会读取所有文件。
+如果 Agent 不能访问本地文件，将上述四个 Markdown 文件连同目标论文作为附件提供；没有附件功能时按顺序粘贴其内容。需要视觉输出时同时提供 HTML 与 CSS 模板。只给一个 GitHub 链接不保证 Agent 会读取所有文件。
 
 ## 支持技能目录的 Agent
 
@@ -71,3 +71,7 @@ HTML 模板可离线打开，样例公式使用 MathML 并保留 LaTeX 源码；
 ### 行内数学与方法论讲解规范
 
 物理量、变量和带单位数值在正文、表格、图注及色块中均使用 LaTeX 并实际渲染；独立公式居中，行内公式随句排版。方法论按理解断点分布红色重点讲解块、紫色概念解释块，覆盖预备知识、关键机制和训练/部署衔接。模板和验收清单已同步。
+
+### 论文原图与原表（0.2.2 规则更新）
+
+完整精读实际插入论文关键原图、原表，并在相邻正文逐项解释：架构图讲模块和箭头；结果图讲坐标轴、图例与趋势；原表讲行列、指标方向、关键数值比较和结论边界。原表支持清晰截图或忠实转录；自制汇总表不能替代原表。只写编号、图注、链接或占位不算完成。附[提取、插入与验收规范](skills/paper-reading-methods/references/figures-and-tables.md)，Markdown/HTML 模板与富文本文档检查同步更新。
