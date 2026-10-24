@@ -1,6 +1,6 @@
 {
   "name": "paper-reading-methods",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "跨 Agent 的论文精读方法与模板：研究背景、方法论、实验；模块与公式解释、训练推理流程和证据核验；实际插入关键原图、原表并逐项解读。",
   "author": {
     "name": "123tthh"
@@ -17,13 +17,13 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "论文精读方法",
-    "shortDescription": "研究背景、方法论、实验框架与笔记格式",
+    "shortDescription": "论文精读：原图原表解读、表格与正文等宽",
     "longDescription": "平台无关的论文精读技能，附方法手册、格式规范、Markdown 与 HTML/CSS 模板。支持直接读取 SKILL.md，保留可选 Codex 元数据；不依赖特定账号、MCP 服务或浏览器工具。",
     "developerName": "123tthh",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "请按研究背景、方法论、实验三段梳理这篇论文，实际插入关键原图、原表并逐项解释，讲清公式与流程，并应用标题、表格与色块格式。",
+      "请按研究背景、方法论、实验三段梳理这篇论文，实际插入关键原图、原表并逐项解释，讲清公式与流程，并应用标题与色块格式；每张表格宽度必须等于正文，左右对齐并逐张核验。",
       "请解释这条公式的变量、维度、推导假设和物理含义。",
       "请检查这份论文笔记，补齐模块与完整流程之间的理解断点。"
     ]
