@@ -1,5 +1,7 @@
 # 论文精读方法 · Paper Reading Methods
 
+想把笔记写得更自然，可参考[段落改写示例](skills/paper-reading-methods/references/clear-prose.md)，沿一个场景读图，用实验数字讲清实际差别。
+
 **适用于不同 AI Agent 的论文精读技能与笔记模板。** 从研究问题出发，沿架构图拆解模块，解释关键公式，再把训练、推理与实验证据连起来。默认中文，支持按要求切换语言。
 
 > An agent-independent skill for close reading of research papers: problem → mechanism → evidence. Includes reusable Markdown and HTML/CSS templates. No account, MCP server, API key, or model-specific runtime is required for reading the materials.
